@@ -24,7 +24,7 @@ public class C03__E2ETesting {
     //*Hotel was inserted successfully” textinin görunduğunu test edin.
     //*OK butonuna tıklayın.
 
-    @Test
+    @Test(groups = "miniRegression")
     public void createHotel() {
         HotelMyCampPage page = new HotelMyCampPage();
 

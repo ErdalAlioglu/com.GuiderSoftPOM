@@ -4,11 +4,13 @@ import com.github.javafaker.Faker;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+
 import pages.FacebookPage;
+import test.C01_FacebookTest01;
 import utilities.Driver;
 
 public class C02_FacebookTest {
-    @Test(groups = "miniRegression")
+    @Test(groups = "smoke")
     public void facebookTest() {
         //1 - https://www.facebook.com/ adresine gidin
         Driver.getDriver().get("https://facebook.com");
@@ -21,6 +23,7 @@ public class C02_FacebookTest {
         facebookPage.girisButton.click();
         //4- Basarili giris yapilamadigini test edin
         Assert.assertTrue(facebookPage.hataliGiris.isDisplayed());
+
         Driver.closeDriver();
 
     }
